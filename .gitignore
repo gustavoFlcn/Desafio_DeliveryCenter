@@ -1,18 +1,66 @@
+PeterWitham
+PeterWitham
+Swift Programming
+JAM Stack
+Contact
+LinkedIN
+Twitter
+Github
+Who I Am
+
+Lead developer and podcaster.
+
+I live and breath creativity.
+Say thanks for helping
+Buy Me a Coffee
+
+Navigation
+Swift Programming
+Listen to Podcasts
+Learn JAMStack
+Developer Resources
+
+Social
+Contact Me
+Twitter
+LinkedIN
+GitHub
+YouTube
+Twitch.tv
+Dev.to
+Bitrise Banner
+
+Editorial: I personally use Bitrise
+Create a gitignore file for Swift and Xcode development
+
+
+As I have previously mentioned, everyone should be using source control. One problem that does come with using source control is avoiding adding files that you should not be tracking. These files can include items like binaries, hidden system files, and personal IDE settings.
+
+If you are using git, this is easily solved by setting up what is called a git ignore file. This file contains a specially formatted list of files and folders to be ignored by the source control application. You can use this file to control what is monitored or allowed to be added, this can be done both at a machine and project level.
+
+A perfect example of a file type to be ignored and not added to source control is binary files. These should not be needed as anyone should be able to download the source and build the application. Not to mention that they can grow rather large and are hard to track changes in as the whole file is considered to be changed every time it is built.
+
+You can create a .gitnignore file by hand, or use tools to make it easier and faster. One tool I like to use is https://www.gitignore.io
+Using gitignore.io to generate a Swift and Xcode file
+
+Using the gitignore.io web application makes the process of creating the pattern matches simple, and it actually works for any language or tool. All you need to do is enter in the box the languages and tools you plan to use and click Create. So for most of us, it will be Swift and Xcode.
+
+GitInore io with swift xcode 1024x424
+
+The newly generated file appears in the browser ready to save. Simply save the file with the name .gitignore in your project folder and the work is done. Remember that it will be a hidden file in the finder unless you are set to show them. Here is the code that gitignore.io generated so you can easily copy and paste if you prefer not to create one.
+
+# Created by https://www.gitignore.io/api/swift,xcode
+
+### Swift ###
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+## Build generated
 build/
 DerivedData/
-*.moved-aside
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -21,11 +69,15 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
 
 ## Obj-C/Swift specific
 *.hmap
-
-## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -39,52 +91,48 @@ playground.xcworkspace
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
 .build/
 
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
+# CocoaPods - Refactored to standalone file
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# Accio dependency management
-Dependencies/
-.accio/
+# Carthage - Refactored to standalone file
 
 # fastlane
 #
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
+fastlane/screenshots
 fastlane/test_output
 
-# Code Injection
+### Xcode ###
+# Xcode
 #
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-iOSInjectionProject/
+## Build generated
+
+## Various settings
+
+## Other
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+# End of https://www.gitignore.io/api/swift,xcode
+
+Now when you next go to use source control, Git will read the file and follow the instructions. This is a great way to keep junk from building up in your repositories, something your team and community members will greatly appreciate. p.s. it is also a great way to not accidentally upload credentials, I have actually seen DB usernames and passwords in repository code.
+Tags
+
+    Development NotesSwiftXcodeSource ControlGit
+
+Copyright PeterWitham 2020
+Buy Me A Coffee
